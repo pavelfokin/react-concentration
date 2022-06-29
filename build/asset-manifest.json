@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/react-concentration/static/css/main.60ab69b8.css",
+    "main.js": "/react-concentration/static/js/main.b88c9cf9.js",
+    "index.html": "/react-concentration/index.html",
+    "main.60ab69b8.css.map": "/react-concentration/static/css/main.60ab69b8.css.map",
+    "main.b88c9cf9.js.map": "/react-concentration/static/js/main.b88c9cf9.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.60ab69b8.css",
+    "static/js/main.b88c9cf9.js"
+  ]
+}
