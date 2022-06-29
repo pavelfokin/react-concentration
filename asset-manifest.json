@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/react-concentration/static/css/main.60ab69b8.css",
-    "main.js": "/react-concentration/static/js/main.e5c3d564.js",
+    "main.js": "/react-concentration/static/js/main.be4be894.js",
     "index.html": "/react-concentration/index.html",
     "main.60ab69b8.css.map": "/react-concentration/static/css/main.60ab69b8.css.map",
-    "main.e5c3d564.js.map": "/react-concentration/static/js/main.e5c3d564.js.map"
+    "main.be4be894.js.map": "/react-concentration/static/js/main.be4be894.js.map"
   },
   "entrypoints": [
     "static/css/main.60ab69b8.css",
-    "static/js/main.e5c3d564.js"
+    "static/js/main.be4be894.js"
   ]
 }
