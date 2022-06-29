@@ -1,0 +1,266 @@
+body {
+  background-color: #282c34;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.app {
+  
+}
+
+.header__logo {
+  height: 25vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .header__logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 25px 0;
+}
+
+.header__text {
+  font-size: calc(10px + 5vmin);
+  margin: 0px 0px 25px 0px;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.layer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.description {
+  text-align: center;
+  color: #d0f5ff;
+}
+
+.btns {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  font-weight: bold;
+  height: 50px;
+  padding: 0px 25px;
+  color: #282c34;
+  line-height: 1;
+  background: #61dafb;
+  text-decoration: none;
+  border-radius: 30px;
+  margin-top: 25px;
+  transition: .3s opacity ease;
+  opacity: 1;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  color: #fff;
+  text-decoration: none;
+  transition: .3s opacity ease;
+  opacity: 1;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &_blue {
+    color: #61dafb;
+  }
+}
+
+.copyright {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  width: 100%;
+  bottom: 25px;
+}
+
+.top {
+  position: absolute;
+  width: 80%;
+  display: flex;
+  justify-content: flex-start;
+  left: 10%;
+  top: 25px;
+}
+
+/*.card {
+  height: 200px;
+  width: 200px;
+  background: #61dafb;
+  transition: .3s transform ease;
+
+  &_rotated {
+    transform: rotateY(180deg);
+  }
+}*/
+
+.game-board {
+  display: grid;
+  height: 100%;
+  width: 100%;
+  grid-template-columns: repeat(6, 1fr);
+  grid-column-gap: 15px;
+  grid-row-gap: 15px;
+}
+
+
+
+
+
+
+.card {
+  position: relative;
+}
+
+label {
+  -webkit-perspective: 1000px;
+  perspective: 1000px;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+}
+
+.card__inner {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transition: all 600ms;
+  transition: all 600ms;
+  z-index: 20;
+}
+
+.card__inner div {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: #61dafb;
+  text-align: center;
+  line-height: 200px;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 2px;
+}
+
+.card__inner .back {
+  background-color: #fff;
+  color: #000;
+  -webkit-transform: rotateX(180deg);
+  transform: rotateX(180deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #fff;
+  transition: .3s background-color, easy;
+
+  img {
+    object-fit: contain;
+    height: 80%;
+    width: 80%;
+  }
+}
+
+.matched .card__inner .back {
+  background-color: transparent;
+  border: 1px solid #61d9fb;
+}
+
+label:hover .card__inner {
+  -webkit-transform: rotateX(20deg);
+  transform: rotateX(20deg);
+  box-shadow: 0 10px 10px rgba(255,255,255,.2);
+}
+
+input {
+  display: none;
+}
+
+.opened .card__inner {
+  transform: rotateX(180deg);
+  -webkit-transform: rotateX(180deg);
+}
+
+label.opened:hover .card__inner {
+  transform: rotateX(160deg);
+  -webkit-transform: rotateX(160deg);
+  box-shadow: 0 10px 10px rgba(255,255,255,.2);
+}
+
+label.opened.matched:hover .card__inner {
+  transform: rotateX(180deg);
+  -webkit-transform: rotateX(180deg);
+  box-shadow: none;
+  cursor: default;
+}
+
+.score {
+  display: flex;
+  gap: 15px;
+  position: absolute;
+  right: 0px;
+  top: -50px;
+
+  span {
+    color: #61d9fb;
+  }
+}
+
+.game {
+  position: relative;
+  height: calc(100vh - 150px);
+  width: 100%;
+}
